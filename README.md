@@ -44,3 +44,25 @@ To build LANDrop:
     ```
     landrop
     ```
+
+### build with deb package
+1. install dpkg-dev
+```
+sudo apt install dpkg-dev fakeroot
+```
+
+2. Clone this repository
+```
+git clone https://github.com/LANDrop/LANDrop
+cd LANDrop
+```
+
+3. build deb package
+```
+dpkg-buildpackage -b -us -uc
+```
+
+4. install
+```
+sudo dpkg -i landrop_1.0.0_amd64.deb
+```
